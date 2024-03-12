@@ -1,0 +1,42 @@
+[
+    {
+     Id:1,
+     Name: 'BMW X6',
+     Price: 50000,
+     Type : 'SUV',
+     State: "For rent",
+     Description: 'The BMW X6 is a mid-size luxury crossover by German automaker BMW.'
+    },
+    {
+      Id:2,
+      Name: 'BMW X5',
+      Price: 40000,
+      Type : 'SUV',
+      State: "To buy",
+      Description: 'The BMW X5 is a mid-size luxury crossover by German automaker BMW.'
+     },
+     {
+      Id:3,
+      Name: 'BMW X3',
+      Price: 30000,
+      Type : 'SUV',
+      State: "To buy",
+      Description: 'The BMW X3 is a mid-size luxury crossover by German automaker BMW.'
+     },
+     {
+      Id:4,
+      Name: 'BMW X4',
+      Price: 35000,
+      Type : 'SUV',
+      State : "For rent",
+      Description: 'The BMW X4 is a mid-size luxury crossover by German automaker BMW.'
+     },
+     {
+      Id:5,
+      Name: 'BMW X1',
+      Price: 20000,
+      Type : 'SUV',
+      State: "For rent",
+      Description: 'The BMW X1 is a mid-size luxury crossover by German automaker BMW.'
+     }
+  ]
