@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ICar } from '../ICar.interface';
 
 @Component({
   selector: 'app-card',
@@ -6,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-@Input() property: any
+  @Input()
+  car!: ICar; 
 
   constructor() { }
 

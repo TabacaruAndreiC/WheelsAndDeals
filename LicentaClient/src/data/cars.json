@@ -1,0 +1,47 @@
+[
+    {
+        "Id": 1,
+        "Name": "BMW X6",
+        "Price": 50000,
+        "Type": "SUV",
+        "State": 1,
+        "Description": "The BMW X6 is a mid-size luxury crossover by German automaker BMW.",
+        "Image": "bmw_x6.jpg"
+    },
+    {
+        "Id": 2,
+        "Name": "BMW X5",
+        "Price": 40000,
+        "Type": "SUV",
+        "State": 1,
+        "Description": "The BMW X5 is a mid-size luxury crossover by German automaker BMW.",
+        "Image": "bmw_x5.jpg"
+    },
+    {
+        "Id": 3,
+        "Name": "BMW X3",
+        "Price": 30000,
+        "Type": "SUV",
+        "State": 2,
+        "Description": "The BMW X3 is a mid-size luxury crossover by German automaker BMW.",
+        "Image": "bmw_x3.jpg"
+    },
+    {
+        "Id": 4,
+        "Name": "BMW X4",
+        "Price": 35000,
+        "Type": "SUV",
+        "State": 1,
+        "Description": "The BMW X4 is a mid-size luxury crossover by German automaker BMW.",
+        "Image": "bmw_x4.jpg"
+    },
+    {
+        "Id": 5,
+        "Name": "BMW X1",
+        "Price": 20000,
+        "Type": "SUV",
+        "State": 2,
+        "Description": "The BMW X1 is a mid-size luxury crossover by German automaker BMW.",
+        "Image": "bmw_x1.jpg"
+    }
+]
