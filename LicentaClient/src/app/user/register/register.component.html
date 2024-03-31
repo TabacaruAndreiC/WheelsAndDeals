@@ -9,32 +9,71 @@
         <div class="form- group col-12">
           <label for="name" class="form-label">Name</label>
           <input type="text" class="form-control" formControlName="userName">
+          <span *ngIf="!userName.valid && ( userName.touched || userSubmitted)" 
+          class="error-block">
+          Name is required
+          </span>
         </div>
 
         <div class="form- group col-12">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" formControlName="email">
+          <input type="text" class="form-control" formControlName="email">
+          <span *ngIf="!email.valid && ( email.touched || userSubmitted)" class="error-block">
+            <span *ngIf="email.hasError('required')">
+            Email is required
+            </span>
+            <span *ngIf="email.hasError('email')">
+            Email is invalid
+           </span>
+          </span>
         </div>
 
         <div class="form- group col-12">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control">
+          <input type="password" class="form-control" formControlName="password">
+          <span *ngIf="!password.valid && ( password.touched || userSubmitted)" class="error-block">
+            <span *ngIf="password.errors?.['required']">
+              Password is required
+            </span>
+            <span *ngIf="password.errors?.['minlength']">
+              Password must be at least 8 characters
+            </span>
+          </span>          
         </div>
 
         <div class="form- group col-12">
           <label for="password2" class="form-label">Confirm Password</label>
-          <input type="password" class="form-control">
+          <input type="password" class="form-control" formControlName="confirmPassword">
+          <span *ngIf="!confirmPassword.valid && (confirmPassword.touched || userSubmitted)" class="error-block">
+            <span *ngIf="confirmPassword.hasError('required')">
+              Confirm Password is required
+            </span>
+          </span>
+            <span *ngIf="registrationForm.hasError('notmatched') && confirmPassword.valid" class="error-block">
+              Passwords must match
+            </span>
         </div>
 
         <div class="form-group col-12">
           <label for="phone" class="form-label">Phone</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" formControlName="mobile">
+          <span *ngIf="!mobile.valid && ( mobile.touched || userSubmitted)" class="error-block">
+            <span *ngIf="mobile.hasError('required')">
+              Phone is required
+            </span>
+            <span *ngIf="mobile.hasError('pattern')">
+              Phone is invalid
+            </span>
+          </span> 
         </div>
 
-        <div class="form-group col-12">
-          <button type="submit" class="btn btn-primary">Register</button>
+        <div class="form-group col-12 d-flex justify-content-between">
+          <button [disabled]="!registrationForm.valid" type="submit" class="btn btn-primary">Register</button>
           <button type="reset" class="btn btn-secondary m1-2">Cancel</button>
         </div>
       </form>
+      <div class="log-in-link">
+        <p>Already have an account? <a routerLink="/login">Log in</a></p>
+      </div>
   </div>
 </div>

@@ -1,0 +1,5 @@
+/* Add this CSS to your styles.css or equivalent file */
+.dropdown-adjust .dropdown-menu {
+    left: -100px; /* Adjust the value as needed */
+  }
+  

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICar } from '../ICar.interface';
+import { ICarBase } from '../../model/iCarBase';
 
 @Component({
   selector: 'app-card',
@@ -8,7 +8,9 @@ import { ICar } from '../ICar.interface';
 })
 export class CardComponent implements OnInit {
   @Input()
-  car!: ICar; 
+  car!: ICarBase; 
+  @Input()
+  hideIcons!: boolean;
 
   constructor() { }
 

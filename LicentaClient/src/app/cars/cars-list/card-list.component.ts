@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarsService } from '../../services/cars.service';
-import { ICar } from '../ICar.interface';
 import { ActivatedRoute } from '@angular/router';
+import { ICarBase } from '../../model/iCarBase';
 
 @Component({
   selector: 'app-card-list',
@@ -9,8 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent implements OnInit {
-  State=1;
-  cars: Array<ICar> = [];
+  State=1; // 1= sell 2=rent
+  cars: Array<ICarBase> = [];
 
   constructor(private route:ActivatedRoute, private carsService: CarsService) { }
 

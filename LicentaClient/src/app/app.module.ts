@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +18,10 @@ import { AddCarComponent } from './cars/add-car/add-car.component';
 import { CarDetailComponent } from './cars/car-detail/car-detail.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
+import { UserServiceService } from './services/user-service.service';
+import { AlertyfyService } from './services/alertify.service';
+import { AuthentificationService } from './services/authentification.service';
+
 
 const appRoutes: Routes = [
   {path: '', component: CardListComponent},
@@ -42,10 +50,17 @@ const appRoutes: Routes = [
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [
-    CarsService
+    CarsService,
+    UserServiceService,
+    AlertyfyService,
+    AuthentificationService
   ],
   bootstrap: [AppComponent]
 })
