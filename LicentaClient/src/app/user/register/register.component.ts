@@ -23,7 +23,8 @@ export class RegisterComponent implements OnInit {
 
 createRegistrationForm() {
   this.registrationForm = this.fb.group({
-    userName: [null, Validators.required],
+    firstName: [null, Validators.required],
+    lastName: [null, Validators.required],
     email: [null, [Validators.required, Validators.email]],
     password: [null, [Validators.required, Validators.minLength(8)]],
     confirmPassword: [null, [Validators.required]],
@@ -36,9 +37,14 @@ createRegistrationForm() {
     const confirmPassword = control.get('confirmPassword')?.value;
     return password === confirmPassword ? null : { notMatched: true };
   }
+//#region Getters
+ 
+  get firstName () {
+    return this.registrationForm.get('firstName')as FormControl;
+  }
 
-  get userName() {
-  return this.registrationForm.get('userName')as FormControl;
+  get lastName() {
+    return this.registrationForm.get('lastName')as FormControl;
   }
 
   get email() {
@@ -56,6 +62,7 @@ createRegistrationForm() {
   get mobile() {
     return this.registrationForm.get('mobile')as FormControl;
   }
+//#endregion
 
   onSubmit() {
     console.log(this.registrationForm);
@@ -73,7 +80,8 @@ createRegistrationForm() {
   }
   userData(): User{
     return this.user = {
-      userName: this.userName.value,
+      firstName: this.firstName.value,
+      lastName: this.lastName.value,
       email: this.email.value,
       password: this.password.value,
       mobile: this.mobile.value

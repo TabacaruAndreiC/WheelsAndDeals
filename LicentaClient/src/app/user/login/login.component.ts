@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     console.log(loginForm.value);
     const token = this.authentificationService.authenticate(loginForm.value);
     if(token){
-      localStorage.setItem('token', token.userName)
+      localStorage.setItem('token', token.firstName)
       this.alertify.success('Login successful');
       this.router.navigate(['/']);
     }

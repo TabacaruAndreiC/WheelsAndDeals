@@ -12,5 +12,5 @@ export interface ICarBase {
     State : number;
     Description: string;
     Available : string;
-    Image: string;
+    Image?: string;
 }

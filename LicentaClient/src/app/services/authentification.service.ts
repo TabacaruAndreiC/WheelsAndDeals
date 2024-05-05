@@ -11,7 +11,7 @@ export class AuthentificationService {
     const storedUsers = localStorage.getItem('users');
     if (storedUsers) {
       const userArray: any[] = JSON.parse(storedUsers);
-      return userArray.find(p => p.userName === user.userName && p.password === user.password);
+      return userArray.find(p => p.email === user.email && p.password === user.password);
     }
     return null; 
   }

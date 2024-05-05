@@ -10,7 +10,7 @@ import { ICarBase } from '../../model/iCarBase';
 })
 export class CardListComponent implements OnInit {
   State=1; // 1= sell 2=rent
-  cars: Array<ICarBase> = [];
+  cars: ICarBase[] = [];
 
   constructor(private route:ActivatedRoute, private carsService: CarsService) { }
 
@@ -18,14 +18,15 @@ export class CardListComponent implements OnInit {
     if(this.route.snapshot.url.toString()){
       this.State=2;
     }
-    this.carsService.getAllCars(this.State).subscribe(
-      data => {
+    this.carsService.getAllCars(this.State).subscribe({
+      next: data => {
         this.cars = data;
         console.log(data);
-      }, error=>{
-        console.log('error')
+      },
+      error: error => {
+        console.log('error');
         console.log(error);
       }
-    );
+    });
   }
 }

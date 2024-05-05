@@ -1,33 +1,25 @@
 <div class="card">
   <div class="img-wrapper">
-    <img class="card-img-top" src="assets/images/{{car.Image}}" alt="{{car.Brand}} {{car.Model}}">
-    <ul *ngIf="!hideIcons" class="list-inline text-center member-icons animate">
-      <li class="list-inline-item">
+    <img *ngIf="car.Image" class="card-img-top" src="assets/images/{{car.Image}}">
+    <img *ngIf="!car.Image" class="card-img-top" src="assets/images/default.jpg">
+    <ul class="list-inline member-icons animate">
+      <li class="list-inline-item text-center">
         <button class="btn btn-primary" routerLink="/car-detail/{{car.Id}}"><i class="far fa-edit"></i></button>
       </li>
-      <li class="list-inline-item">
+      <li class="list-inline-item text-center">
         <button class="btn btn-primary"><i class="far fa-address-book"></i></button>
       </li>
     </ul>
   </div>
-
     <div class="card-body p-1">
       <h1>{{car.Brand}} {{car.Model}}</h1>
       <h2>{{car.Type}}</h2>
-      <h3>{{car.Price}}</h3>
+      <h3 >Price: <span class="font-highlight" >{{car.Price}} $</span></h3>
       <p>
-        <strong>Year:</strong> {{car.Year}}
-        <strong>| KM:</strong> {{car.Km}}<br>
-        <strong>Engine:</strong> {{car.Engine}}
-        <strong>| Power:</strong> {{car.Power}}
-        <strong>| Fuel:</strong> {{car.Fuel}}<br>
+        <strong>Year:</strong> {{car.Year}} <strong>| KM:</strong> {{car.Km}}<br>
+        <strong>Engine:</strong> {{car.Engine}} <strong>| Power:</strong> {{car.Power}} <strong>| Fuel:</strong> {{car.Fuel}}<br>
         <strong>Status:</strong> {{car.Available}}
       </p>
       <h5>{{car.Description}}</h5>
     </div>
   </div>
-
-
-
-
-

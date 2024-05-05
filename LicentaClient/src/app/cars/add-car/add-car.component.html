@@ -5,101 +5,107 @@
           Add car
           </div>
         <div class="card-body">
-        <form (ngSubmit)='onSubmit($event)' #Form="ngForm">
+        <form (ngSubmit)='onSubmit($event)' [formGroup]="addCarForm">
           <div class="tab-panel">
             <tabset class="member-tabset" #formTabs >
-              <tab heading="Basic info" ngModelGroup="BasicInfo" #BasicInfo="ngModelGroup">
+              <tab heading="Basic info" formGroupName="BasicInfo">
                 <div class="form-group col-12">
                   <label for="Brand">Brand</label>
-                  <input type="text" class="form-control" #propName="ngModel"
-                  ngModel name="Brand" required minlength="2" [(ngModel)]="carView.Brand">
-                  <span *ngIf="!propName.valid && propName.touched" class="error-block">
-                      <span *ngIf="propName.errors?.['required']">Brand is required</span>
-                    <span *ngIf="propName.errors?.['minlength']">Brand must be at least 2 characters long</span>
-                  </span>
+                  <input type="text" class="form-control" formControlName="Brand"
+                  [(ngModel)]="carView.Brand">
                 </div>
                 <div class="form-group col-12">
                   <label for="Model">Model</label>
-                  <input type="text" class="form-control" ngModel name="Model"[(ngModel)]="carView.Model">
+                  <input type="text" class="form-control" formControlName="Model"
+                  [(ngModel)]="carView.Model"
+                  >
                 </div>
                 <div class="form-group col-12">
                   <p>Car type</p>
-                  <div class="btn-group" btnRadioGroup name="carType" [(ngModel)]="carView.Type">
+                  <div class="btn-group" btnRadioGroup formControlName="Type" [(ngModel)]="carView.Type">
                     <label 
                     *ngFor="let carType of carTypes"
                     class="btn btn-outline-primary mr-2"
-                    [btnRadio]="carType" tabindex="0" role="button" name="carType">{{carType}}</label>
+                    [btnRadio]="carType" tabindex="0" role="button" formControlName="Type">{{carType}}</label>
                   </div>
-                </div>
+                </div> 
                 <div class="form-group col-12">
                   <label for="Year">Year</label>
-                  <input type="text" class="form-control" ngModel name="Year" [(ngModel)]="carView.Year">
+                  <input type="text" class="form-control" formControlName="Year" [(ngModel)]="carView.Year">
                 </div>
                 <div class="form-group col-12">
-                  <label for="Price">Price (Euro) </label>
-                  <input type="text" class="form-control" ngModel name="Price" [(ngModel)]="carView.Price">
+                  <label for="Price">Price (Dolars) </label>
+                  <input type="text" class="form-control" formControlName="Price" [(ngModel)]="carView.Price">
+                  <div> 
+                    <div class="error-block" *ngIf="Price.invalid && (NextClicked || Price.touched) ">
+                      Price is required
+                    </div>
+                  </div>
                 </div>
-                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(1)"[disabled]="!BasicInfo.valid">Next</button>
+                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(1, true)">Next</button>
               </tab>
               
-              <tab heading="Detailed information">
+              <tab heading="Detailed information" formGroupName="DetailedInformation">
                 <div class="form-group col-12">
-                  <label> Km </label>
-                  <input type="text" class="form-control" name="Km" [(ngModel)]="carView.Km">
+                  <label> Km </label> 
+                  <input type="text" class="form-control" formControlName="Km" [(ngModel)]="carView.Km">
                 </div>
                 <div class="form-group col-12">
                   <label> Engine </label>
-                  <input type="text" class="form-control" name="Engine" [(ngModel)]="carView.Engine">
+                  <input type="text" class="form-control" formControlName="Engine" [(ngModel)]="carView.Engine"> 
                 </div> 
                 <div class="form-group col-12">
                   <label> Power </label>
-                  <input type="text" class="form-control" name="Power"[(ngModel)]="carView.Power">
+                  <input type="text" class="form-control" formControlName="Power"[(ngModel)]="carView.Power">
                 </div>
                 <div class="form-group col-12">
                   <label> Fuel </label>
-                  <input type="text" class="form-control" name="Fuel" [(ngModel)]="carView.Fuel">
+                  <input type="text" class="form-control" formControlName="Fuel" [(ngModel)]="carView.Fuel">
                 </div>
                 <div class="form-group col-12">
-                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(2)">Next</button>
-                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(0)">Back</button>
+                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(2, true)">Next</button>
+                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(0, true)">Back</button>
                 </div>
               </tab>
               
-              <tab heading="Other details">
+              <tab heading="Other details" formGroupName="OtherDetails">
                 <div class="form-group col-12">
                   <p>State</p>
-                  <div class="btn-group" btnRadioGroup name="State" [(ngModel)]="carView.State">
-                    <label class="btn btn-outline-primary mr-2 "btnRadio=1 role="button" name="State">Sell</label>
-                    <label class="btn btn-outline-primary"btnRadio=2 role="button" name="State">Buy</label>
+                  <div class="btn-group" btnRadioGroup formControlName="State" [(ngModel)]="carView.State">
+                    <label class="btn btn-outline-primary mr-2 "btnRadio=1 role="button" name="State">Buy</label>
+                    <label class="btn btn-outline-primary"btnRadio=2 role="button" name="State">Rent</label>
+                  </div>
+                  <div class="error-block" *ngIf="CarState.invalid && NextClicked">
+                      Select state
                   </div>
                 </div>
 
                 <div class="form-group col-12">
                   <p>Available</p>
-                  <div class="btn-group" btnRadioGroup name="Available" [(ngModel)]="carView.Available">
-                    <label class="btn btn-outline-primary mr-2 "btnRadio=1 role="button" name="Available">Yes</label>
-                    <label class="btn btn-outline-primary"btnRadio=2 role="button" name="Available">No</label>
+                  <div class="btn-group" btnRadioGroup formControlName="Available" [(ngModel)]="carView.Available">
+                    <label class="btn btn-outline-primary mr-2 "btnRadio="Available" role="button" name="Available">Yes</label>
+                    <label class="btn btn-outline-primary"btnRadio="Not available" role="button" name="Available">No</label>
                   </div>
                 </div>
                 <div class="form-group col-12">
-                  <label> Description </label>
-                  <textarea type="text" class="form-control" rows="6"></textarea>
+                  <label for="Description"> Description </label>
+                  <textarea type="text" class="form-control" rows="6" 
+                  formControlName="Description" 
+                  [(ngModel)]="carView.Description" ></textarea>
                 </div>
                 <div class="form-group col-12">
-                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(3)">Next</button>
-                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(1)">Back</button>
+                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(3, true)">Next</button>
+                  <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(1, true)">Back</button>
                 </div>
               </tab>
-
-
               <tab heading="Photos">
-                <div class="form-group col-12">
-                  <div class="photo-control">
-                    <button class="mt-5" type="button">Upload</button>
+                <div class="form-group col-12" >
+                  <div class="photo-control"> 
+                    <button class="mt-5" type="button" >Upload</button>
                     ...
                   </div>
                   <div class="form-group col-12 ">
-                    <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(2)">Back</button>
+                    <button type="button" class="btn btn-primary btn-block custom-button" (click)="selectTab(2, true)">Back</button>
                     <button type="reset" class="btn btn-primary btn-block custom-button" >Cancel</button>
                     <button type="submit" class="btn btn-primary btn-block custom-button">Save</button>
                   </div>
@@ -120,3 +126,4 @@
       </div>
   </div>
 </div>
+
