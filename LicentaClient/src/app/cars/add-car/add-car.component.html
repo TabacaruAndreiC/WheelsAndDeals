@@ -71,12 +71,12 @@
               <tab heading="Other details" formGroupName="OtherDetails">
                 <div class="form-group col-12">
                   <p>State</p>
-                  <div class="btn-group" btnRadioGroup formControlName="State" [(ngModel)]="carView.State">
-                    <label class="btn btn-outline-primary mr-2 "btnRadio=1 role="button" name="State">Buy</label>
-                    <label class="btn btn-outline-primary"btnRadio=2 role="button" name="State">Rent</label>
+                  <div class="btn-group" btnRadioGroup formControlName="State">
+                    <label class="btn btn-outline-primary mr-2" btnRadio="1" role="button" name="State">Buy</label>
+                    <label class="btn btn-outline-primary" btnRadio="2" role="button" name="State">Rent</label>
                   </div>
                   <div class="error-block" *ngIf="CarState.invalid && NextClicked">
-                      Select state
+                    Select state
                   </div>
                 </div>
 

@@ -1,6 +1,106 @@
-<p>
-  car-detail works!
-  Selected Car: {{carId}}
-  <br/>
-  <button (click)="onSelectNext" class="btn btn-primary" >Select Next Page</button>
-</p>
+<div class="row shadow">
+  <div class="col-sm-4 p-0" *ngIf="car">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img *ngIf="car.Image" class="card-img-top" src="assets/images/{{car.Image}}">
+        <img *ngIf="!car.Image" class="card-img-top" src="assets/images/default.jpg">
+      </div>
+      <div class="card-body">
+        <h1 class="card-title">{{car.Brand}}</h1>
+        <div>
+          <strong>Model:</strong> {{car.Model}}
+        </div>
+        <hr>
+        <div>
+          <strong>Year:</strong> {{car.Year}}
+        </div>
+        <hr>
+        <div>
+          <strong>Price:</strong> {{car.Price}} $
+        </div>
+        <hr>
+        <div>
+          <strong>State:</strong>
+          <span *ngIf="car.State === 1">For sale</span>
+          <span *ngIf="car.State === 2">For rent</span>
+        </div>
+        <hr>
+      </div>
+      <div class="card-footer">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary mr-2">Add to cart</button>
+          <button class="btn btn-primary">Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8 p-0" *ngIf="car">
+    <div class="tab-panel">
+      <tabset class="member-tabset">
+        <tab heading="Overview">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="heading">
+                <strong>Car brand</strong>
+                <p>{{car.Brand}}</p>
+              </div>
+              <div class="heading">
+                <strong>Car model</strong>
+                <p>{{car.Model}}</p>
+              </div>
+              <div class="heading">
+                <strong>Car type</strong>
+                <p>{{car.Type}}</p>
+              </div>
+              <div class="heading">
+                <strong>Year</strong>
+                <p>{{car.Year}}</p>
+              </div>
+              <div class="heading">
+                <strong>Description</strong>
+                <p>{{car.Description}}</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="heading">
+                <strong>Price</strong>
+                <p>{{car.Price}}</p>
+              </div>
+              <div class="heading">
+                <strong>Km</strong>
+                <p>{{car.Km}}</p>
+              </div>
+              <div class="heading">
+                <strong>Engine</strong>
+                <p>{{car.Engine}}</p>
+              </div>
+              <div class="heading">
+                <strong>Power</strong>
+                <p>{{car.Power}}</p>
+              </div>
+              <div class="heading">
+                <strong>Fuel</strong>
+                <p>{{car.Fuel}}</p>
+              </div>
+              <div class="heading">
+                <strong>Status</strong>
+                <p>{{car.Available}}</p>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="Address">
+          Maps info soon
+        </tab>
+        <tab heading="Photos">
+          <h1>Photos</h1>
+
+        </tab>
+        <tab heading="Contact">
+          <h1>Contact details</h1>
+
+        </tab>
+      </tabset>
+    </div>
+  </div>
+</div>

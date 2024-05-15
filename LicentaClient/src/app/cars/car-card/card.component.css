@@ -24,12 +24,6 @@
     opacity: 0.5    ;
 }
 
-.card img {
-    transform: scale(1,1);
-    transition-duration: 500ms;
-    transition-timing-function: ease-out;
-}
-
 .member-icons{
   position: absolute;
   bottom: 0;

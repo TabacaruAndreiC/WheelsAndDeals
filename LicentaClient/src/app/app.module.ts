@@ -21,6 +21,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { UserServiceService } from './services/user-service.service';
 import { AlertyfyService } from './services/alertify.service';
 import { AuthentificationService } from './services/authentification.service';
+import { CarDetailResolverService } from './cars/car-detail/car-detail-resolver.service';
 
 
 const appRoutes: Routes = [
@@ -60,7 +61,8 @@ const appRoutes: Routes = [
     CarsService,
     UserServiceService,
     AlertyfyService,
-    AuthentificationService
+    AuthentificationService,
+    CarDetailResolverService
   ],
   bootstrap: [AppComponent]
 })

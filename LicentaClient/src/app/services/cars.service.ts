@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import {map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { ICarBase } from '../model/iCarBase';
 import { Car } from '../model/car';
@@ -11,28 +11,47 @@ import { Car } from '../model/car';
 export class CarsService {
 
   constructor(private http:HttpClient) { }
-   getAllCars (State:number):Observable<ICarBase[]> {
+
+  getCar(id: number): Observable< Car | null> {
+    return this.getAllCars().pipe(
+      map(cars => {
+        throw new Error('Error');
+        const car = cars.find(c => Number(c.Id) === id) as Car; 
+        return car || null;
+      })
+    );
+  }
+
+  getAllCars (State?:number):Observable<Car[]> {
     return this.http.get<any>('data/cars.json').pipe(
       map(data =>{
-        const propertiesArray: Array<ICarBase> = [];
+        const propertiesArray: Array<Car> = [];
         const localCars = JSON.parse(localStorage.getItem('newCar') || 'null');
         if(localCars){
-          for(const id in localCars){
-            if(localCars.hasOwnProperty(id) && localCars[id].State === State){
-              propertiesArray.push(localCars[id]);
+          for(const car of localCars){ 
+            if(State){
+              if(car.State === State){
+                propertiesArray.push(car);
+              }
+            } else {
+              propertiesArray.push(car);
             }
-          }
+          } 
         }
         for(const id in data){
-          if(data.hasOwnProperty(id)&& data[id].State === State){
+          if(State){
+            if(data.hasOwnProperty(id)&& data[id].State === State){
+              propertiesArray.push(data[id]);
+            }
+          } else {
             propertiesArray.push(data[id]);
           }
         }
         return propertiesArray;
       })
     );
-    return this.http.get<ICarBase[]>('data/cars.json');
   }
+
   addCar(car: Car){
     let newCar = [car];
     if(localStorage.getItem('newCar')){
@@ -40,6 +59,7 @@ export class CarsService {
     }
     localStorage.setItem('newCar', JSON.stringify(newCar));
   }
+
   newCarId(){
     if(localStorage.getItem('carId')){
       localStorage.setItem('carId', String(+localStorage.getItem('carId')! + 1));
