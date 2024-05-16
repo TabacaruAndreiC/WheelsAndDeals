@@ -1,21 +1,23 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { Car } from '../../model/car';
 import { CarsService } from '../../services/cars.service';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarDetailResolverService implements Resolve<Car | null> { 
 
-  constructor(private carsService: CarsService) { }
+  constructor(private router: Router, private carsService: CarsService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Car | null> | Promise<Car | null> | Car | null {
     const carId = +route.params['id'];
-    if (isNaN(carId)) {
-      return null;
-    }
-    return this.carsService.getCar(carId);
+    return this.carsService.getCar(+carId).pipe(
+      catchError(error=>{
+        this.router.navigate(['/']);
+        return of(null);
+      })
+    );
   }
 }

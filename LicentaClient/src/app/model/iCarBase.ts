@@ -13,4 +13,5 @@ export interface ICarBase {
     Description: string;
     Available : string;
     Image?: string;
+    Photos?: string[];
 }

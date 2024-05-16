@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { ICarBase } from '../model/iCarBase';
 import { Car } from '../model/car';
 
 @Injectable({
@@ -15,9 +14,8 @@ export class CarsService {
   getCar(id: number): Observable< Car | null> {
     return this.getAllCars().pipe(
       map(cars => {
-        throw new Error('Error');
-        const car = cars.find(c => Number(c.Id) === id) as Car; 
-        return car || null;
+        //throw new Error('Error');
+        return cars.find(c => Number(c.Id) === id) || null;
       })
     );
   }

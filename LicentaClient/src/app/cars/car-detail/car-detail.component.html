@@ -35,7 +35,7 @@
     </div>
   </div>
   <div class="col-sm-8 p-0" *ngIf="car">
-    <div class="tab-panel">
+    <div class="tab-panel p-3">
       <tabset class="member-tabset">
         <tab heading="Overview">
           <div class="row">
@@ -93,12 +93,32 @@
           Maps info soon
         </tab>
         <tab heading="Photos">
-          <h1>Photos</h1>
-
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li *ngFor="let photo of car?.Photos; let i = index" [class.active]="i === 0" data-target="#carouselExampleIndicators" [attr.data-slide-to]="i"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div *ngFor="let photo of car?.Photos; let i = index" class="carousel-item" [class.active]="i === 0">
+                <img class="d-block w-100 carousel-image" [src]="'assets/images/' + photo" alt="Slide {{i+1}}">
+              </div>
+              <div *ngFor="let photo of carPhotos; let i = index" class="carousel-item" [class.active]="i === 0">
+                <img class="d-block w-100 carousel-image" [src]="photo" alt="Slide {{i+1}}">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>     
         </tab>
+        
         <tab heading="Contact">
           <h1>Contact details</h1>
-
+            
         </tab>
       </tabset>
     </div>

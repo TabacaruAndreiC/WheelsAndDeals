@@ -16,4 +16,5 @@ export class Car implements ICarBase{
     Available!: string;
     Image?:string;
     PostedOn!: string;
+    Photos?: string[];
 }

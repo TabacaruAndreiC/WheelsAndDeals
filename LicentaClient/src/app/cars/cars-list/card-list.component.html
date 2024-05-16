@@ -1,5 +1,20 @@
+<label>Filter Brand: &nbsp; </label>
+<input [(ngModel)]='Brand'>
+<button type="button" (click)="onSearchBrand()">Search</button>
+<button type="button" (click)="onSearchBrandClear()">Clear</button>
+<label>Sort by &nbsp;</label>
+<select [(ngModel)]='SortbyParam'>
+  <option value="Price">Price</option>
+  <option value="Brand">Brand</option>
+</select>
+<button type="button" (click)="onSortDirection()">
+<i *ngIf="SortDirection === 'asc'" class="fa fa-sort-alpha-down"></i>
+<i *ngIf="SortDirection === 'desc'" class="fa fa-sort-alpha-up"></i>
+</button>
 <div class ="row">
-  <div *ngFor="let car of cars" class="shadow-lg col-4 p-3">
-    <app-card [car]="car"> </app-card>
+  <div *ngFor="let car of cars | filter : SearchBrand: 'Brand'|sort:[SortbyParam, SortDirection]" class="col-sm-4">
+    <div class="shadow-lg p-3 mb-4">
+      <app-card [car]="car"> </app-card>
+    </div>
   </div>
 </div>  

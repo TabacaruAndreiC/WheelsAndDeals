@@ -3,6 +3,8 @@ import { CarsService } from '../../services/cars.service';
 import { ActivatedRoute } from '@angular/router';
 import { ICarBase } from '../../model/iCarBase';
 
+
+
 @Component({
   selector: 'app-card-list',
   templateUrl: './card-list.component.html',
@@ -11,6 +13,11 @@ import { ICarBase } from '../../model/iCarBase';
 export class CardListComponent implements OnInit {
   State=1; // 1= sell 2=rent
   cars: ICarBase[] = [];
+  Today = new Date();
+  Brand='';
+  SearchBrand='';
+  SortbyParam='';
+  SortDirection='asc';
 
   constructor(private route:ActivatedRoute, private carsService: CarsService) { }
 
@@ -28,5 +35,19 @@ export class CardListComponent implements OnInit {
         console.log(error);
       }
     });
+  }
+  onSearchBrand(){ 
+    this.SearchBrand=this.Brand;
+  }
+  onSearchBrandClear(){
+    this.SearchBrand='';
+    this.Brand='';
+  }
+  onSortDirection(){
+    if(this.SortDirection==='asc'){
+      this.SortDirection='desc';
+    } else {
+      this.SortDirection='asc';
+    }
   }
 }

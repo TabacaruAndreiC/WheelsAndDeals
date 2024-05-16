@@ -22,16 +22,18 @@ import { UserServiceService } from './services/user-service.service';
 import { AlertyfyService } from './services/alertify.service';
 import { AuthentificationService } from './services/authentification.service';
 import { CarDetailResolverService } from './cars/car-detail/car-detail-resolver.service';
+import { FilterPipe } from './Pipes/filter.pipe';
+import { SortPipe } from './Pipes/sort.pipe';
 
 
 const appRoutes: Routes = [
   {path: '', component: CardListComponent},
   {path: 'add-car', component: AddCarComponent},
   {path: 'rent-car', component: CardListComponent},
-  {path: 'car-detail/:id', component: CarDetailComponent},
+  {path: 'car-detail/:id', component: CarDetailComponent, resolve: {car: CarDetailResolverService}},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: '**', component: CardListComponent}
+  //{path: '**', component: CardListComponent}
 ];
 
 @NgModule({
@@ -43,7 +45,9 @@ const appRoutes: Routes = [
       AddCarComponent,
       CarDetailComponent,
       LoginComponent,
-      RegisterComponent
+      RegisterComponent,
+      FilterPipe,
+      SortPipe
    ],
   imports: [
     BrowserModule,
