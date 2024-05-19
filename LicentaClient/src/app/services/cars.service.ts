@@ -10,6 +10,9 @@ import { Car } from '../model/car';
 export class CarsService {
 
   constructor(private http:HttpClient) { }
+  getAllBrands():Observable<string[]>{
+    return this.http.get<string[]>('https:localhost:5000/api/brands');
+  }
 
   getCar(id: number): Observable< Car | null> {
     return this.getAllCars().pipe(

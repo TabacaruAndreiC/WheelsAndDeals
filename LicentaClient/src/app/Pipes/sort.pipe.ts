@@ -12,18 +12,19 @@ export class SortPipe implements PipeTransform {
     if(sortDirection === 'desc'){
       multuplier = -1;
     }
-    value.sort((a:any, b:any)=>{
-      if(a[sortField]<b[sortField]){
-        return -1*multuplier;
-      } else if(a[sortField]>b[sortField]){
-        return 1*multuplier;
-      } else {
-        return 0;
+    if(value){
+      value.sort((a:any, b:any)=>{
+        if(a[sortField]<b[sortField]){
+          return -1*multuplier;
+        } else if(a[sortField]>b[sortField]){
+          return 1*multuplier;
+        } else {
+          return 0;
+        }
       }
+      );
+      
+      return value;
     }
-    );
-    
-    return value;
   }
-
 }

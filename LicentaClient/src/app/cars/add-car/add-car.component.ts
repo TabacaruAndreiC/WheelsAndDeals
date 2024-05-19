@@ -41,6 +41,7 @@ export class AddCarComponent implements OnInit {
 
   ngOnInit() {
     this.CreateAddCarForm();
+    this.carsService.getAllBrands().subscribe(data => console.log(data));
   }
 
   CreateAddCarForm(){
