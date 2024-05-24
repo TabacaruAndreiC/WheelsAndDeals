@@ -6,6 +6,8 @@
 <select [(ngModel)]='SortbyParam'>
   <option value="Price">Price</option>
   <option value="Brand">Brand</option>
+  <option value="Model">Model</option>
+  <option value="Year">Year</option>
 </select>
 <button type="button" (click)="onSortDirection()">
 <i *ngIf="SortDirection === 'asc'" class="fa fa-sort-alpha-down"></i>

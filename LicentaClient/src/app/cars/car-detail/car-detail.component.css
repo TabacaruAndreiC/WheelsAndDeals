@@ -3,7 +3,7 @@
 }
 
 .card img{
-    padding: 10p;
+    padding: 10px;
 }
 
 .carousel-item img {
@@ -12,5 +12,12 @@
     width: auto;
     height: auto;
     object-fit: cover; 
+  }
+  .embed-responsive {
+    width: 100%; /* Adjust as needed */
+    margin: 0 auto; /* Centers the map */
+  }
+  .embed-responsive-item {
+    height: 700px; /* Adjust as needed */
   }
   

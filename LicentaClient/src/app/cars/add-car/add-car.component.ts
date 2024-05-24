@@ -22,6 +22,7 @@ export class AddCarComponent implements OnInit {
 
 
   carTypes = ['Sedan', 'SUV', 'Coupe', 'Convertible', 'Wagon', 'Hatchback', 'Van', 'Truck', 'Minivan'];
+  brandList: any[] = []; 
 
   carView: ICarBase ={Id: 0, 
     Brand:'', 
@@ -41,7 +42,10 @@ export class AddCarComponent implements OnInit {
 
   ngOnInit() {
     this.CreateAddCarForm();
-    this.carsService.getAllBrands().subscribe(data => console.log(data));
+    this.carsService.getAllBrands().subscribe(data => {
+      this.brandList = data;
+      console.log(data);
+    });
   }
 
   CreateAddCarForm(){

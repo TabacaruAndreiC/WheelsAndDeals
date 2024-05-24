@@ -10,3 +10,8 @@
     width: 100%; 
     margin-bottom: 10px; 
   }
+  .form-control {
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+  }

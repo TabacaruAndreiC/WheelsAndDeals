@@ -11,7 +11,7 @@ export class CarsService {
 
   constructor(private http:HttpClient) { }
   getAllBrands():Observable<string[]>{
-    return this.http.get<string[]>('https:localhost:5000/api/brands');
+    return this.http.get<string[]>('http://localhost:5263/api/Brand');
   }
 
   getCar(id: number): Observable< Car | null> {

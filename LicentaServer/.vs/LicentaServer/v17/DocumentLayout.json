@@ -7,16 +7,36 @@
       "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\licentaserver.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:licentaserver.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\dtos\\branddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:dtos\\branddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\data\\repo\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:data\\repo\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\interfaces\\ibrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:interfaces\\ibrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\data\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:data\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|d:\\licenta\\licentaserver\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{758FFD4C-E98D-4B62-A418-26B372500C29}|LicentaServer.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +46,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BrandDto.cs",
+              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Dtos\\BrandDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\BrandDto.cs",
+              "ToolTip": "D:\\Licenta\\LicentaServer\\Dtos\\BrandDto.cs",
+              "RelativeToolTip": "Dtos\\BrandDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T22:28:40.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Brand.cs",
+              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Models\\Brand.cs",
+              "RelativeDocumentMoniker": "Models\\Brand.cs",
+              "ToolTip": "D:\\Licenta\\LicentaServer\\Models\\Brand.cs",
+              "RelativeToolTip": "Models\\Brand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:49:11.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Data\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Data\\UnitOfWork.cs",
+              "ToolTip": "D:\\Licenta\\LicentaServer\\Data\\UnitOfWork.cs",
+              "RelativeToolTip": "Data\\UnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T21:54:47.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "D:\\Licenta\\LicentaServer\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T21:53:55.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBrandRepository.cs",
+              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Interfaces\\IBrandRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IBrandRepository.cs",
+              "ToolTip": "D:\\Licenta\\LicentaServer\\Interfaces\\IBrandRepository.cs",
+              "RelativeToolTip": "Interfaces\\IBrandRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:41:44.863Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,44 +116,44 @@
               "RelativeDocumentMoniker": "Controllers\\BrandController.cs",
               "ToolTip": "D:\\Licenta\\LicentaServer\\Controllers\\BrandController.cs",
               "RelativeToolTip": "Controllers\\BrandController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA+AAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwDUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T22:15:59.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LicentaServer.http",
-              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\LicentaServer.http",
-              "RelativeDocumentMoniker": "LicentaServer.http",
-              "ToolTip": "D:\\Licenta\\LicentaServer\\LicentaServer.http",
-              "RelativeToolTip": "LicentaServer.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-05-16T21:59:48.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\Licenta\\LicentaServer\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "DocumentIndex": 4,
+              "Title": "BrandRepository.cs",
+              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Data\\Repo\\BrandRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repo\\BrandRepository.cs",
+              "ToolTip": "D:\\Licenta\\LicentaServer\\Data\\Repo\\BrandRepository.cs",
+              "RelativeToolTip": "Data\\Repo\\BrandRepository.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwBsAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T21:59:55.786Z"
+              "WhenOpened": "2024-05-24T17:15:49.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Data\\DataContext.cs",
+              "ToolTip": "D:\\Licenta\\LicentaServer\\Data\\DataContext.cs",
+              "RelativeToolTip": "Data\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T13:09:32.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Licenta\\LicentaServer\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Licenta\\LicentaServer\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T18:14:19.573Z"
             }
