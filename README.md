@@ -1,72 +1,61 @@
 # Wheels&Deals
 
-Wheels&Deals este o aplicație web completă pentru tranzacții auto, care facilitează vânzarea, cumpărarea și închirierea de mașini într-un mediu online sigur și eficient. Proiectul utilizează tehnologii moderne pentru a oferi o experiență de utilizare optimă și funcționalități avansate.
+Wheels&Deals is a full-featured web application for car transactions, streamlining the buying, selling, and renting of vehicles in a secure and efficient online environment. This project uses modern technologies to deliver an optimal user experience with powerful features.
 
-## Funcționalități
+## Features
 
-- **Autentificare și autorizare:** Utilizând JWT pentru securizarea accesului utilizatorilor.
-- **Gestionare anunțuri:** Posibilitatea de a posta, edita și șterge anunțuri pentru mașini, inclusiv încărcarea de fotografii prin Cloudinary.
-- **Interfață prietenoasă:** Design responsive și intuitiv, realizat cu Bootstrap, pentru a asigura accesibilitate pe toate dispozitivele.
-- **Căutare și filtrare:** Funcționalități avansate de căutare și filtrare a mașinilor după diverse criterii (brand, preț, tip, etc.).
-- **Notificări:** Utilizarea AlertifyJS pentru notificări de tip toast, oferind feedback instantaneu utilizatorilor.
-- **Încărcare fișiere:** Implementare cu Ng2-file-upload pentru încărcarea facilă a fotografiilor mașinilor.
-- **Chatbot integrat:** Utilizarea OpenAI API pentru a oferi asistență virtuală utilizatorilor prin intermediul unui chatbot inteligent.
+* **Authentication and Authorization:** Secure user access via JWT.
+* **Ad Management:** Users can create, edit, and delete car listings, including photo uploads through Cloudinary.
+* **Responsive User Interface:** Designed with Bootstrap for a user-friendly experience across all devices.
+* **Advanced Search and Filtering:** Find cars by various criteria (brand, price, type, etc.).
+* **Instant Notifications:** Provides feedback using toast notifications with AlertifyJS.
+* **File Upload Support:** Easy photo uploads for car listings using Ng2-file-upload.
+* **Integrated Chatbot:** Virtual assistance powered by OpenAI API, offering users smart support.
 
-## Tehnologii utilizate
+## Technologies Used
 
-### Back-end
-- C#
-- .NET 8
-- Entity Framework Core
-- AutoMapper
-- CloudinaryDotNet
-- Microsoft.AspNetCore.Authentication.JwtBearer
-- Microsoft.EntityFrameworkCore
-- Swagger
-- Postman
+### Back-End
+* **Languages & Frameworks:** C#, .NET 8, Entity Framework Core, AutoMapper
+* **Authentication & Authorization:** Microsoft.AspNetCore.Authentication.JwtBearer
+* **Database & ORM:** Microsoft.EntityFrameworkCore, CloudinaryDotNet
+* **Documentation & Testing:** Swagger, Postman
 
-### Front-end
-- HTML5
-- CSS3
-- Bootstrap
-- Angular
-- TypeScript
-- Ng2-file-upload
-- AlertifyJS
+### Front-End
+* **Languages & Libraries:** HTML5, CSS3, Bootstrap, Angular, TypeScript
+* **Upload & Notification Libraries:** Ng2-file-upload, AlertifyJS
 
-### Bază de date
-- Microsoft SQL Server Management Studio (SSMS)
-- Abordarea "code first" și gestionarea migrațiilor
+### Database
+* **DBMS:** Microsoft SQL Server
+* **Setup:** "Code-first" approach with migration management in Entity Framework
 
-### Alte tehnologii
-- Visual Studio 2022 pentru dezvoltarea API-ului
-- Visual Studio Code pentru front-end
-- Git pentru controlul versiunilor
-- OpenAI API pentru integrarea unui chatbot
+### Additional Tools
+* **IDEs:** Visual Studio 2022 (for API development), Visual Studio Code (for front-end)
+* **Version Control:** Git
+* **API Integration:** OpenAI API for chatbot integration
 
-## Instalare și configurare
+## Installation and Setup
 
 ### Prerequisites
 
-- .NET 8 SDK
-- Node.js și npm
-- SQL Server
-- Visual Studio 2022 (pentru back-end)
-- Visual Studio Code (pentru front-end)
+* [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+* [Node.js and npm](https://nodejs.org/)
+* [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+* [Visual Studio 2022](https://visualstudio.microsoft.com/) (for back-end)
+* [Visual Studio Code](https://code.visualstudio.com/) (for front-end)
 
-### Pași de instalare
+### Installation Steps
 
-1. **Clonează repository-ul:**
+1. **Clone the Repository:**
 
     ```sh
-    git clone https://github.com/utilizator/WheelsAndDeals.git
+    git clone https://github.com/username/WheelsAndDeals.git
     cd WheelsAndDeals
     ```
 
-2. **Configurare baza de date:**
+2. **Database Configuration:**
 
-   - Deschide SQL Server Management Studio (SSMS) și creează o nouă bază de date.
-   - Configurează connection string-ul în `appsettings.json`:
+   * Open SQL Server Management Studio (SSMS) and create a new database.
+   * Update the connection string in `appsettings.json`:
 
      ```json
      "ConnectionStrings": {
@@ -74,29 +63,29 @@ Wheels&Deals este o aplicație web completă pentru tranzacții auto, care facil
      }
      ```
 
-3. **Rularea migrațiilor pentru a crea schema bazei de date:**
+3. **Apply Database Migrations:**
 
     ```sh
     dotnet ef database update
     ```
 
-4. **Instalarea pachetelor pentru front-end:**
+4. **Install Front-End Dependencies:**
 
     ```sh
     cd ClientApp
     npm install
     ```
 
-5. **Rularea aplicației:**
+5. **Run the Application:**
 
-    - În Visual Studio 2022, setează proiectul API ca proiect de start și rulează-l.
-    - În terminalul din `ClientApp`, rulează aplicația Angular:
+    * In Visual Studio 2022, set the API project as the startup project and run it.
+    * In the `ClientApp` directory, start the Angular application:
 
     ```sh
     ng serve
     ```
 
-6. **Accesarea aplicației:**
-   - Deschide un browser și accesează `http://localhost:4200` pentru a vedea interfața front-end.
-   - API-ul rulează implicit la `http://localhost:5000`.
+6. **Access the Application:**
+   * Open a browser and go to `http://localhost:4200` for the front-end interface.
+   * The API is accessible by default at `http://localhost:5000`.
 
